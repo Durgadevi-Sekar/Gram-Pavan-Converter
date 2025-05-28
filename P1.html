@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>Project - 1 Pavan to Gram and Gram to Pavan Calculator</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: rgb(206, 204, 204); */
+            background-color: rgb(88, 87, 87);
+        }
+
+        div {
+            width: 450px;
+            height: 350px;
+            background-color:chocolate;
+            color: whitesmoke; 
+            margin: 20px;
+            padding: 25px;
+            border-radius: 60px;
+            /* box-shadow: 7px 7px 7px rgb(161, 69, 3); */
+            box-shadow: 7px 7px 7px black;
+            
+        }
+
+        button {
+            background-color:white;
+            color:black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 5px 5px 5px black;
+            width: 180px;
+            height:40px;
+            font-size: large;
+
+        }
+        button:hover{
+            width: 190px;
+            height:45px;
+        }
+
+        p {
+            text-align: center;
+            border-radius: 40px;
+        }
+
+        input[type=text] {
+            text-align: center;
+            border-radius: 30px;
+            width: 200px;
+            height: 36px;
+            box-shadow:5px 5px 5px black ;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+        input[id]{
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>PAVAN TO GRAM CONVERTER</h1>
+        <br><br>
+
+        <h3>Value to be Converted
+            <input type="text" id="number">
+        </h3>
+
+        <p>
+            <button onclick="mul()">Convert(Gram)</button>
+        </p>
+
+        <h3>Result
+            <input type="text" id="Answer">
+        </h3>
+        <script>
+            var num, ans
+
+            function mul() {
+                num = parseInt(document.getElementById("number").value)
+                console.log(num)
+                ans = (num * 8)
+                console.log(ans)
+                document.getElementById("Answer").value = ans
+
+            }
+        </script>
+    </div>
+
+    <hr>
+
+
+    <div>
+        <h1>GRAM TO PAVAN CONVERTER</h1>
+        <br><br>
+
+        <h3>Value to be Converted
+            <input type="text" id="num1">
+        </h3>
+
+        <p>
+            <button onclick="div()">Convert(Pavan)</button>
+        </p>
+
+        <h3>Result
+            <input type="text" id="Ans">
+        </h3>
+        <script>
+            var num1, ans
+
+            function div() {
+                num1 = parseInt(document.getElementById("num1").value)
+                console.log(num1)
+                ans = (num1 / 8)
+                console.log(ans)
+                document.getElementById("Ans").value = ans
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>
